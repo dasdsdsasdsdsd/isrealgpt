@@ -40,15 +40,15 @@ const hero = {
   vy: 0,
   width: 76,
   height: 90,
-  outline: "#b34444",
+  outline: "#1f1f1f",
   hat: "#e53935",
   hatBrim: "#b71c1c",
-  shirt: "#f4511e",
-  overalls: "#1e88e5",
+  shirt: "#c62828",
+  overalls: "#1f1f1f",
   gloves: "#f5f5f5",
-  boots: "#6d4c41",
-  skin: "#ffcc80",
-  hair: "#5d4037",
+  boots: "#1f1f1f",
+  skin: "#f2c6a0",
+  hair: "#1f1f1f",
   onGround: false,
   face: 1,
   dashTimer: 0,
@@ -169,92 +169,88 @@ function drawHero(character) {
   ctx.translate(character.x, character.y);
   ctx.scale(character.face, 1);
 
-  ctx.fillStyle = character.shirt;
-  ctx.strokeStyle = character.outline;
-  ctx.lineWidth = 4;
-
+  ctx.fillStyle = character.outline;
   ctx.beginPath();
-  ctx.ellipse(0, 12, 52, 44, 0, 0, Math.PI * 2);
+  ctx.ellipse(0, 18, 56, 46, 0, 0, Math.PI * 2);
   ctx.fill();
-  ctx.stroke();
 
   ctx.fillStyle = character.overalls;
   ctx.beginPath();
-  ctx.ellipse(0, 22, 48, 34, 0, 0, Math.PI * 2);
+  ctx.ellipse(0, 18, 52, 42, 0, 0, Math.PI * 2);
   ctx.fill();
-  ctx.stroke();
 
-  ctx.fillStyle = "#fdd835";
+  ctx.fillStyle = character.shirt;
   ctx.beginPath();
-  ctx.arc(-15, 10, 5, 0, Math.PI * 2);
-  ctx.arc(15, 10, 5, 0, Math.PI * 2);
+  ctx.ellipse(0, 6, 42, 28, 0, 0, Math.PI * 2);
   ctx.fill();
 
   ctx.fillStyle = character.skin;
+  ctx.strokeStyle = character.outline;
+  ctx.lineWidth = 3;
   ctx.beginPath();
-  ctx.ellipse(0, -18, 36, 30, 0, 0, Math.PI * 2);
+  ctx.ellipse(0, -16, 34, 28, 0, 0, Math.PI * 2);
   ctx.fill();
   ctx.stroke();
 
   ctx.fillStyle = character.hair;
   ctx.beginPath();
-  ctx.ellipse(-8, -28, 20, 14, 0.1, 0, Math.PI * 2);
+  ctx.ellipse(0, -18, 30, 16, 0, 0, Math.PI * 2);
   ctx.fill();
 
   ctx.fillStyle = character.hat;
   ctx.strokeStyle = character.hatBrim;
   ctx.lineWidth = 3;
   ctx.beginPath();
-  ctx.ellipse(-6, -50, 30, 18, -0.1, 0, Math.PI * 2);
+  ctx.ellipse(0, -48, 34, 20, 0, 0, Math.PI * 2);
   ctx.fill();
   ctx.stroke();
 
   ctx.fillStyle = character.hatBrim;
   ctx.beginPath();
-  ctx.ellipse(-6, -40, 40, 10, 0, 0, Math.PI * 2);
+  ctx.ellipse(0, -38, 46, 12, 0, 0, Math.PI * 2);
   ctx.fill();
 
   ctx.fillStyle = "#fafafa";
   ctx.beginPath();
-  ctx.ellipse(-2, -52, 10, 8, 0, 0, Math.PI * 2);
+  ctx.ellipse(0, -50, 10, 8, 0, 0, Math.PI * 2);
   ctx.fill();
   ctx.fillStyle = character.hatBrim;
   ctx.font = "bold 12px Trebuchet MS";
-  ctx.fillText("M", -6, -48);
-
-  ctx.beginPath();
-  ctx.ellipse(10, -18, 16, 12, 0.2, 0, Math.PI * 2);
-  ctx.fill();
-  ctx.stroke();
+  ctx.fillText("M", -4, -46);
 
   ctx.fillStyle = "#2b2b2b";
   ctx.beginPath();
-  ctx.arc(-12, -24, 4, 0, Math.PI * 2);
-  ctx.arc(4, -22, 4, 0, Math.PI * 2);
+  ctx.arc(-10, -22, 4, 0, Math.PI * 2);
+  ctx.arc(10, -22, 4, 0, Math.PI * 2);
   ctx.fill();
 
   ctx.fillStyle = character.hair;
   ctx.beginPath();
-  ctx.ellipse(-2, -10, 18, 8, 0.1, 0, Math.PI * 2);
+  ctx.ellipse(0, -6, 20, 8, 0, 0, Math.PI * 2);
+  ctx.fill();
+
+  ctx.fillStyle = "#1f1f1f";
+  ctx.beginPath();
+  ctx.ellipse(0, -2, 18, 6, 0, 0, Math.PI * 2);
   ctx.fill();
 
   ctx.strokeStyle = "#2b2b2b";
   ctx.lineWidth = 3;
   ctx.beginPath();
-  ctx.moveTo(-20, -2);
-  ctx.quadraticCurveTo(-5, 6, 12, -4);
+  ctx.moveTo(-14, 4);
+  ctx.quadraticCurveTo(0, 10, 14, 4);
   ctx.stroke();
 
   ctx.fillStyle = character.gloves;
   ctx.beginPath();
-  ctx.ellipse(-38, 18, 16, 12, 0, 0, Math.PI * 2);
-  ctx.ellipse(38, 18, 16, 12, 0, 0, Math.PI * 2);
+  ctx.ellipse(-40, 22, 16, 12, 0, 0, Math.PI * 2);
+  ctx.ellipse(40, 22, 16, 12, 0, 0, Math.PI * 2);
   ctx.fill();
 
   ctx.fillStyle = character.boots;
   ctx.beginPath();
-  ctx.ellipse(-28, 52, 26, 12, 0, 0, Math.PI * 2);
-  ctx.ellipse(28, 52, 26, 12, 0, 0, Math.PI * 2);
+  ctx.ellipse(-28, 56, 26, 12, 0, 0, Math.PI * 2);
+  ctx.ellipse(28, 56, 26, 12, 0, 0, Math.PI * 2);
   ctx.fill();
 
   if (character.dashTimer > 0) {
