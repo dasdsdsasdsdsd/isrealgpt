@@ -1,0 +1,96 @@
+:root {
+  color-scheme: light;
+  font-family: "Comic Sans MS", "Trebuchet MS", sans-serif;
+  background: #fef6e4;
+  color: #2b2b2b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+.page {
+  max-width: 1080px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+header {
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: #3f2d1c;
+}
+
+header p {
+  margin: 8px 0 0;
+  font-size: 1.1rem;
+}
+
+.hud {
+  background: #fff3c4;
+  border-radius: 16px;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  border: 2px dashed #f0a04b;
+}
+
+.game-wrap {
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+canvas {
+  width: 100%;
+  max-width: 960px;
+  border-radius: 24px;
+  border: 6px solid #2f2f2f;
+  background: linear-gradient(180deg, #a3d9ff 0%, #c2f5ff 45%, #ffe7b3 45%, #ffe7b3 100%);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.status {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 999px;
+  border: 2px solid #f0a04b;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 720px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  .hud {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

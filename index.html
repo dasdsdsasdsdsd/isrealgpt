@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chunky Quest</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <h1>Chunky Quest</h1>
+        <p>
+          A silly, chunky platformer where the heroes are proudly rotund and
+          wonderfully weird.
+        </p>
+      </header>
+      <section class="hud">
+        <div>
+          <strong>Goal:</strong> Grab 5 donut coins without getting booped.
+        </div>
+        <div>
+          <strong>Controls:</strong> ← → to waddle, ↑ to hop, Space for dash
+          puff.
+        </div>
+      </section>
+      <div class="game-wrap">
+        <canvas id="game" width="960" height="540" aria-label="Chunky Quest game"></canvas>
+        <div class="status" id="status">Press any arrow key to start!</div>
+      </div>
+      <footer>
+        <span>Tip:</span> Dash puff mid-air to float for a beat.
+      </footer>
+    </div>
+    <script src="game.js"></script>
+  </body>
+</html>
