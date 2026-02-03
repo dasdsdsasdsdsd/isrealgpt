@@ -20,6 +20,14 @@ const hero = {
   height: 80,
   color: "#ff7b7b",
   outline: "#b34444",
+  hat: "#e53935",
+  hatBrim: "#b71c1c",
+  shirt: "#f4511e",
+  overalls: "#1e88e5",
+  gloves: "#f5f5f5",
+  boots: "#6d4c41",
+  skin: "#ffcc80",
+  hair: "#5d4037",
   onGround: true,
   face: 1,
   dashTimer: 0,
@@ -68,6 +76,7 @@ function drawHero(character) {
   ctx.translate(character.x, character.y);
   ctx.scale(character.face, 1);
 
+  ctx.fillStyle = character.shirt;
   ctx.fillStyle = character.color;
   ctx.strokeStyle = character.outline;
   ctx.lineWidth = 4;
