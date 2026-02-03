@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chunky Quest</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <h1>Chunky Quest</h1>
+        <p>
+          A silly, chunky platformer starring a big-bellied plumber hero with a
+          comedic, jumbo look.
+        </p>
+      </header>
+      <section class="hud">
+        <div>
+          <strong>Goal:</strong> Clear the level, grab coins, and touch the flag.
+        </div>
+        <div>
+          <strong>Controls:</strong> ← → to waddle, ↑ or Space to hop, bonk ? blocks.
+        </div>
+      </section>
+      <div class="game-wrap">
+        <canvas id="game" width="960" height="540" aria-label="Chunky Quest game"></canvas>
+        <div class="status" id="status">Press any arrow key to start!</div>
+      </div>
+      <footer>
+        <span>Tip:</span> Bounce on bad guys, watch for pits, and hit ? blocks.
+      </footer>
+    </div>
+    <script src="game.js"></script>
+  </body>
+</html>
